@@ -1,0 +1,66 @@
+.songDetailContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background: linear-gradient(rgb(196, 22, 202), rgb(134, 21, 110)); */
+  background-image: linear-gradient(#a6c0fe 0%, #f68084 100%);
+  align-items: center;
+}
+
+.songDetailContainer image {
+  width: 500rpx;
+  height: 500rpx;
+  margin-top: 320rpx;
+  border-radius: 20rpx;
+}
+
+/* 底部控制区域 */
+.musicControl {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+}
+
+.musicControl text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  text-align: center;
+  color: #fff;
+  font-size: 50rpx;
+}
+
+.musicControl text.big {
+  font-size: 80rpx;
+}
+
+.icon-bofang {
+  font-size: 95rpx !important;
+}
+
+/* 进度条控制区域 */
+.progressControl {
+  position: absolute;
+  bottom: 200rpx;
+  display: flex;
+  width: 640rpx;
+  line-height: 80rpx;
+  height: 80rpx;
+  color: #454546;
+  font-size: 20rpx;
+}
+
+.musicSlider {
+  margin-top: 7rpx;
+}
+
+slider {
+  width: 450rpx;
+}
+
+wx-slider .wx-slider-handle-wrapper {
+  height: 10rpx;
+}

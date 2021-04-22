@@ -1,0 +1,66 @@
+.songSquareContainer {
+  padding:0 30rpx;
+}
+/* 推荐歌单区域 */
+.name {
+  margin: 10rpx 0;
+  font-size: 30rpx;
+}
+.songList {
+  display: flex;
+  flex-flow: wrap;
+}
+.songList .songItem {
+  position: relative;
+  width: 31%;
+  height: 210rpx;
+  padding-bottom: 130rpx;
+  padding-right: 15rpx;
+}
+.songList .songItem image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.playCount {
+  position: absolute;
+  top: 10rpx;
+  right: 25rpx;
+  width: 90rpx;
+  height: 30rpx;
+  background:rgba(235, 219, 219, 0.1);
+  font-size: 19rpx;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 17rpx;
+  line-height: 30rpx;
+}
+.icon-bofang1 {
+  font-size: 17rpx;
+}
+.songListName {
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置其对齐模式*/
+  -webkit-line-clamp: 2; /*设置多行的行数*/
+}
+  
+/* 优质歌单区域 */
+.songListScroll {
+  display: flex;
+  height: 300rpx;
+}
+.songListScroll .songItem {
+  position: relative;
+  width: 300rpx;
+  height: 210rpx;
+  padding-bottom: 130rpx;
+  padding-right: 15rpx;
+}
+.songListScroll .songItem image {
+  width: 210rpx;
+  height: 210rpx;
+  border-radius: 20rpx;
+}

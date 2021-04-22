@@ -1,0 +1,59 @@
+<!--pages/songList/songList.wxml-->
+<view class="songListNavgation">歌单
+  <view class="goBack" bindtap="goBack"></view>
+</view>
+<view class="songListContainer">
+  <view class="header">
+    <view class="songListMsg">
+      <view class="songImg">
+        <image src="{{playList.coverImgUrl}}"></image>
+        <view class="playCount">
+          <text class="iconfont icon-bofang1"></text>
+          <text>{{playList.playCount}}</text>
+        </view>
+      </view>
+      <view class="authorMsg">
+        <view class="songTitle">{{playList.name}}</view>
+        <view class="author">
+          <image src="{{playList.creator.avatarUrl}}"></image>
+          <text class="name">{{playList.creator.nickname}}</text>
+        </view>
+        <view class="desc">{{playList.description === null ? '' : playList.description}}</view>
+        <view class="details"></view>
+      </view>
+    </view>
+    <view class="songHeat">
+      <view class="shoucang">
+        <text class="iconfont icon-tianjiazengjiajia num"></text>
+        <text class="count">{{playList.subscribedCount}}</text>
+      </view>
+      <view class="pinglun">
+        <text class="iconfont icon-pinglun1 num"></text>
+        <text class="count">{{playList.commentCount}}</text>
+      </view>
+      <view class="zhuanfa">
+        <text class="iconfont icon-zhuanfa num"></text>
+        <text class="count">{{playList.shareCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="listHeader">
+    <text class="bfLogo iconfont icon-bofang2"></text>
+    <text>播放全部</text>
+    <text class="songCount">({{playList.tracks.length}})</text>
+  </view>
+  <view class="songLists">
+    <scroll-view scroll-y class="listScroll">
+      <view bindtap="toSongDetail" data-index="{{ index }}" data-song="{{ item }}" class="scrollItem"
+        wx:for="{{playList.tracks}}" wx:key='id'>
+        <text class="index">{{index+1}}</text>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <text class="musicAuthor">{{item.ar[0].name}}</text>
+        </view>
+        <text class="iconfont icon-gengduo1"></text>
+      </view>
+
+    </scroll-view>
+  </view>
+</view>

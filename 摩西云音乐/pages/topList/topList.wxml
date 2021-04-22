@@ -1,0 +1,30 @@
+<view class="topListContainer">
+  <!-- 云音乐特色榜 -->
+  <view class="spList">
+    <text class="listTitle">云音乐特色榜</text>
+    <view class="spListItem {{background[index]}}" wx:for="{{spList}}" wx:key='id' bindtap="toSongList" data-songlist="{{item}}">
+      <view class="listNameImg">
+        <text class="listName {{titleColor[index]}}">{{item.name}}</text>
+        <image src="{{item.tracks[0].al.picUrl}}"></image>
+      </view>
+      <view class="listMsg">
+        <view class="songItem" wx:for="{{item.tracks}}" wx:key='id'>
+          <text class="index">{{index + 1}}.</text>
+          <text class="songName">{{item.name}} - </text>
+          <text class="songAuthor">{{item.ar[0].name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 全球媒体榜 -->
+  <view class="gm">
+    <text class="listTitle">全球媒体榜</text>
+    <view class="gmList">
+      <view class="gmListItem" wx:for="{{gmList}}" wx:key='id' data-songlist="{{item}}" bindtap="toSongList">
+        <image src="{{item.coverImgUrl}}"></image>
+        <view class="listState">{{item.updateFrequency}}</view>
+        <view class="gmlistName">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

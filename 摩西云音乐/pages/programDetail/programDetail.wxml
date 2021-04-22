@@ -1,0 +1,23 @@
+<view class="songDetailContainer">
+	<view class="author">{{song.dj.nickname}}</view>
+	<image src="{{song.coverUrl}}"></image>
+	<!-- 进度条控制区域 -->
+	<view class="progressControl">
+		<text>{{ currentTimeChangingShow ? currentTimeChanging : currentTime }}</text>
+		<!-- 总进度条 -->
+		<view class="musicSlider">
+			<slider activeColor="#ec4141" backgroundColor="#454546" bindchanging="musicChanging" bindchange="musicChange"
+				block-size="12" value="{{ currentValue }}"></slider>
+		</view>
+		<text>{{durationTime}}</text>
+	</view>
+	<!-- 底部控制播放区域 -->
+	<view class="musicControl">
+		<text
+			class="iconfont {{mode===playMode.sequence ? 'icon-liebiaoxunhuan' : mode===playMode.loop ? 'icon-danquxunhuan' : 'icon-iconsMusicyemianbofangmoshiShuffle'}}" bindtap="changePlayMode"/>
+		<text class="iconfont icon-shangyishoushangyige" id="pre" bindtap="handleSwitch" />
+		<text bindtap="handleMusicPlay" class="iconfont {{ isPlay ? 'icon-ziyuan100' : 'icon-bofang' }} big " />
+		<text class="iconfont icon-xiayigexiayishou" id="next" bindtap="handleSwitch" />
+		<text class="iconfont icon-iconsMusicyemianbofangmoshiPlayList" />
+	</view>
+</view>

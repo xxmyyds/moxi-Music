@@ -1,0 +1,26 @@
+<view class="songSquareContainer">
+  <view class="name">{{userInfo.nickname}}的推荐歌单</view>
+  <!-- 推荐歌单区域 -->
+  <view class="songList">
+    <view class="songItem" wx:for="{{recommendSonglist}}" wx:key='id' bindtap="toSongList" data-songList="{{item}}">
+      <image src="{{item.picUrl}}"></image>
+      <view class="playCount">
+        <text class="iconfont icon-bofang1"></text>
+        <text>{{item.playcount}}</text>
+      </view>
+      <view class="songListName">{{item.name}}</view>
+    </view>
+  </view>
+  <view class="name">优质歌单甄选</view>
+  <!-- 优质歌单区域 -->
+  <scroll-view scroll-x enable-flex class="songListScroll">
+    <view class="songItem" wx:for="{{HQSongList}}" wx:key='id' bindtap="toSongList" data-songList="{{item}}">
+      <image src="{{item.picUrl}}"></image>
+      <view class="playCount">
+        <text class="iconfont icon-bofang1"></text>
+        <text>{{item.playcount}}</text>
+      </view>
+      <view class="songListName">{{item.name}}</view>
+    </view>
+  </scroll-view>
+</view>

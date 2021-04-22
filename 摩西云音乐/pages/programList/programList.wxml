@@ -1,0 +1,56 @@
+<!--pages/songList/songList.wxml-->
+<view class="songListNavgation">播单
+  <view class="goBack" bindtap="goBack"></view>
+</view>
+<view class="songListContainer">
+  <view class="header">
+    <view class="songListMsg">
+      <view class="songImg">
+        <image src="{{programListInfo.picUrl}}"></image>
+      </view>
+      <view class="authorMsg">
+        <view class="songTitle">{{programListInfo.name}}</view>
+        <view class="author">
+          <image src="{{programListInfo.dj.avatarUrl}}"></image>
+          <text class="name">{{programListInfo.dj.nickname}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="songHeat">
+      <view class="shoucang">
+        <text class="iconfont icon-tianjiazengjiajia num"></text>
+        <text class="count">{{programListInfo.subCount}}</text>
+      </view>
+      <view class="pinglun">
+        <text class="iconfont icon-pinglun1 num"></text>
+        <text class="count">{{programListInfo.commentCount}}</text>
+      </view>
+      <view class="zhuanfa">
+        <text class="iconfont icon-zhuanfa num"></text>
+        <text class="count">{{programListInfo.shareCount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="listHeader">
+    <text class="bfLogo iconfont icon-bofang2"></text>
+    <text>播放全部</text>
+    <text class="songCount">({{programListDetail.length}})</text>
+  </view>
+  <view class="songLists">
+    <scroll-view scroll-y class="listScroll">
+      <view bindtap="toSongDetail" data-program="{{item}}" data-index="{{index}}" class="scrollItem"
+        wx:for="{{programListDetail}}" wx:key='id'>
+        <text class="index">{{programListDetail.length-index}}</text>
+        <view class="musicInfo">
+          <text class="musicName">{{item.name}}</text>
+          <view class="programAuthorMsg">
+            <text class="iconfont icon-bofang1"></text>
+            <text>{{item.listenerCount}}</text>
+            <text class="musicAuthor">{{item.dj.nickname}}</text>
+          </view>
+        </view>
+        <text class="iconfont icon-gengduo1"></text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

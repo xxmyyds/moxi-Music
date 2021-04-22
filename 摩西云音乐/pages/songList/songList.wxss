@@ -1,0 +1,244 @@
+/* pages/songList/songList.wxss */
+.songListNavgation {
+  position: relative;
+  width: 100%;
+  height: 130rpx;
+  text-align: center;
+  line-height: 230rpx;
+  font-size: 30rpx;
+  color: white;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+.goBack {
+  position: absolute;
+  top: 90rpx;
+  left: 58rpx;
+  width: 30rpx;
+  height: 30rpx;
+  transform: rotate(-45deg);
+  border-top: 2rpx solid #ffffff;
+  border-left: 2rpx solid #ffffff;
+}
+
+.header {
+  position: relative;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  width: 100%;
+  height: 400rpx;
+  /* border-radius:  200rpx/20rpx ; */
+  border-radius: 0 0 20% 20%;
+}
+
+/* 图标区域 */
+.songListMsg {
+  display: flex;
+  position: absolute;
+  top: 55rpx;
+  right: 13rpx;
+  width: 90%;
+  height: 250rpx;
+  padding: 15rpx 25rpx;
+}
+
+.songImg image {
+  box-shadow: 5rpx 5rpx 10rpx 5rpx #b8cedf5b;
+}
+
+.songListMsg .songImg {
+  /* width: 33.3%; */
+  flex: 1;
+  position: relative;
+  height: 220rpx;
+  padding-top: 10rpx;
+}
+
+.songListMsg .songImg image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+
+.songListMsg .authorMsg {
+  width: 63%;
+}
+
+.playCount {
+  position: absolute;
+  top: 21rpx;
+  right: 10rpx;
+  width: 90rpx;
+  height: 30rpx;
+  background: rgba(235, 219, 219, 0.1);
+  font-size: 19rpx;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 17rpx;
+  line-height: 30rpx;
+}
+
+.icon-bofang1 {
+  font-size: 17rpx;
+}
+
+/* 歌单信息区域 */
+.authorMsg {
+  position: relative;
+  margin-left: 30rpx;
+}
+
+.songTitle {
+  font-size: 28rpx;
+  color: #ffffff;
+  margin-bottom: 25rpx;
+  height: 77rpx;
+}
+
+.author {
+  display: flex;
+  padding-bottom: 45rpx;
+}
+
+.author image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.name {
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  margin-left: 10rpx;
+}
+
+.author,
+.desc {
+  color: #ffffff81;
+  font-size: 26rpx;
+}
+
+.desc {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /*设置其对齐模式*/
+  -webkit-line-clamp: 1;
+  /*设置多行的行数*/
+}
+
+.details {
+  position: absolute;
+  bottom: 26rpx;
+  right: 65rpx;
+  width: 19rpx;
+  height: 19rpx;
+  border-top: 1rpx solid #ffffff81;
+  border-right: 1rpx solid #ffffff81;
+  transform: rotate(45deg);
+}
+
+/* 歌单火热度区域 */
+.songHeat {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 190rpx;
+  bottom: -195rpx;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 73%;
+  height: 77rpx;
+  line-height: 45rpx;
+  text-align: center;
+  font-size: 21rpx;
+  border-radius: 40rpx;
+  background-color: #ffffff;
+  box-shadow: 5rpx 5rpx 10rpx 5rpx #b8cedf5b;
+}
+
+.shoucang,
+.pinglun,
+.zhuanfa {
+  display: flex;
+  padding: 0 30rpx;
+  margin: 20rpx 0;
+}
+ .num{
+  font-size: 36rpx;
+}
+.shoucang,
+.pinglun {
+  border-right: 1rpx solid #868f96;
+}
+.count {
+  margin-left: 10rpx;
+}
+/* 歌曲列表头部区域 */
+.bfLogo {
+  color: red;
+}
+.listHeader {
+  display: flex;
+  margin-top: 60rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.bfLogo {
+  margin: 0 20rpx;
+  font-size: 40rpx;
+}
+.songCount {
+  font-size: 24rpx;
+  color: #868f96;
+  line-height: 60rpx;
+  margin-left: 10rpx;
+}
+/* 歌曲列表区域 */
+.listScroll {
+  height: calc(100vh - 660rpx);
+}
+.scrollItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 20rpx;
+  padding-left: 30rpx;
+  margin-top: 20rpx;
+}
+.index {
+  width: 40rpx;
+  line-height: 80rpx;
+  text-align:center;
+  margin-right: 10rpx;
+}
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.musicInfo text{
+  height: 40rpx;
+  line-height: 40rpx;
+  
+  max-width: 500rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.musicName {
+  font-size: 30rpx;
+}
+.musicAuthor {
+  font-size: 20rpx;
+}
+.icon-gengduo1 {
+  position: absolute;
+  right: 60rpx;
+  width: 80rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: right;
+}

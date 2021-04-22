@@ -1,0 +1,136 @@
+/* 云音乐特色榜区域 */
+.spList {
+  height: 1300rpx;
+  box-shadow: 5rpx 5rpx 10rpx 5rpx #b8cedf5b;
+  border-radius:0 0 40rpx 40rpx;
+}
+.spListItem {
+  display: flex;
+  width: 590rpx;
+  height: 230rpx;
+  margin: 20rpx auto;
+  padding: 20rpx 45rpx;
+  border-radius: 20rpx;
+}
+
+.listTitle {
+  padding-left: 38rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.listNameImg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.listNameImg image {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 15rpx;
+}
+
+.listName {
+  font-size: 45rpx;
+  font-weight: bold;
+  color: #f68084;
+  margin-bottom: 20rpx;
+}
+.listMsg {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 20rpx 65rpx;
+  padding-top: 20rpx;
+  font-size: 28rpx;
+}
+.songItem {
+  margin: 0 20rpx;
+  margin-bottom: 25rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置其对齐模式*/
+  -webkit-line-clamp: 1; /*设置多行的行数*/
+}
+.index {
+  margin-right: 15rpx;
+}
+.songAuthor {
+  font-size: 24rpx;
+  color: #cab3b3;
+}
+/* 全球媒体榜区域 */
+.gmList {
+  display: flex;
+  flex-flow: wrap;
+  margin: 20rpx 40rpx;
+}
+.gmList .gmListItem {
+  position: relative;
+  width: 31%;
+  height: 210rpx;
+  padding-bottom: 90rpx;
+  padding-right: 15rpx;
+}
+.gmList .gmListItem image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+}
+.listState {
+  position: absolute;
+  top: 10rpx;
+  right: 25rpx;
+  width: 90rpx;
+  height: 30rpx;
+  background:rgba(235, 219, 219, 0.1);
+  font-size: 18rpx;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 17rpx;
+  line-height: 30rpx;
+}
+.gmlistName {
+  font-size: 26rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*设置其对齐模式*/
+  -webkit-line-clamp: 1; /*设置多行的行数*/
+}
+.gm {
+  margin-top: 25rpx;
+  box-shadow: 10rpx 10rpx 10rpx 30rpx #b8cedf5b;
+  border-radius:40rpx 40rpx 0 0;
+}
+/* spListItem动态背景颜色 */
+.bac1 {
+  background-color:#f8e9ee ;
+}
+.bac2 {
+  background-color:#e9f2f1 ;
+}
+.bac3 {
+  background-color:#eaeff5 ;
+}
+.bac4 {
+  background-color:#f6e8e8 ;
+}
+/* spListItem动态标题颜色 */
+.t1 {
+  color: #d64578;
+}
+.t2 {
+  color: #41927f;
+}
+.t3 {
+  color: #3a67ae;
+}
+.t4 {
+  color: #cb3d2c;
+}
